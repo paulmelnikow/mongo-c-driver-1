@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.preserve_paths       = "src/mongoc/*.{def,defs}"
   s.compiler_flags       = "-DMONGOC_COMPILATION"
   s.requires_arc         = false
-  s.dependency             'libbson', '~> 1.0.2'
+  s.dependency             'libbson', '~> 1.1.0-rc0'
 end
