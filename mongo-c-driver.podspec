@@ -1,3 +1,20 @@
+#
+# IMPORTANT
+#
+# This development branch depends on an unreleased development version of
+# libbson.
+#
+# CocoaPods does not allow pods to depend on pods from git, so you need
+# to pull them in from your Podfile instead:
+# 
+# pod 'libbson', :git => 'https://github.com/paulmelnikow/libbson', :branch => 'podspec-1'
+# pod 'mongo-c-driver', :git => 'https://github.com/paulmelnikow/mongo-c-driver-1', :branch => 'podspec'
+#
+# Note these forks, which you need to use because the 10gen repositories
+# do not contain podspecs at this time. These forks are unstable and
+# are for development purposes only.
+#
+
 Pod::Spec.new do |s|
   s.name                 = "mongo-c-driver"
   s.version              = "2.0.0-dev"
@@ -17,5 +34,5 @@ Pod::Spec.new do |s|
   s.preserve_paths       = "src/mongoc/*.{def,defs}"
   s.compiler_flags       = "-DMONGOC_COMPILATION"
   s.requires_arc         = false
-  s.dependency             'libbson', '~> 1.1.0-rc0'
+#  s.dependency             'libbson', '~> 1.1.0-rc0'
 end
