@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.author               = "10gen"
   s.social_media_url     = "http://twitter.com/mongodb"
   s.source               = { :git => "https://github.com/mongodb/mongo-c-driver.git", :tag => "#{s.version}" }
-  s.prepare_command      = './autogen.sh && ./configure --with-libbson=no'
+  s.prepare_command      = './autogen.sh && ./configure --with-libbson=no --enable-ssl=no --enable-sasl=no'
   s.source_files         = "src/mongoc/*.{c,h}"
   s.header_mappings_dir  = "src"
   s.private_header_files = "src/mongoc/*-private.h"
